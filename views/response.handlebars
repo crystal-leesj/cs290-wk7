@@ -1,0 +1,27 @@
+{{#if bodyList.length}}
+  <h1>POST Request Received</h1>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Value</th>
+		</tr>
+		{{#each bodyList}}
+			<tr>
+				<td>{{this.name}}</td>
+				<td>{{this.value}}</td>
+			</tr>
+		{{/each}}
+	</table>
+{{/if}}
+
+{{#if dataList.length}}
+  <h1>GET Request Received</h1>
+  <h1>You sent the following data in a GET request:</h1>
+
+  {{#each dataList}}
+    <ul>
+  		<li>Name: {{this.name}}</li>
+  		<li>Value: {{this.value}}</li>
+    </ul>
+  {{/each}}
+{{/if}}
