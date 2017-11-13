@@ -14,6 +14,8 @@ app.set('port', 3344);
 
 app.get('/',function(req,res){
   var qParams = [];
+  qParams.push({'name': ' ', 'value': ' '});
+	
   for (var p in req.query){
     qParams.push({'name': p, 'value': req.query[p]});
   }
@@ -24,6 +26,7 @@ app.get('/',function(req,res){
 
 app.post('/', function(req, res){
   var bParams = [];
+  bParams.push({'name': ' ', 'value': ' '});
 
   for (var b in req.body) {
 		bParams.push({'name': b, 'value': req.body[b]});
